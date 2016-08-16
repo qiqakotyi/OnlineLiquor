@@ -1,0 +1,34 @@
+.profile {
+  background: url('../images/carousel-4.jpg') no-repeat;
+  background-size: cover;
+
+  .page-header {
+    text-align: left;
+    padding-left: 30px;
+    border: none;
+
+    h2 {
+      padding-bottom: 30px;
+      color: $white;
+    }
+  }
+
+  .profile-details {
+    height: 100%;
+
+    .profile-wrap {
+      margin-left: 30px;
+      background-color: rgba(0, 0, 0, 0.5);
+      height: 100%;
+
+      .profile-header {
+        padding-bottom: 9px;
+        margin: 40px 0 20px;
+        border-bottom: 1px solid #eee;
+        h3 {
+          color: $white;
+        }
+      }
+    }
+  }
+}

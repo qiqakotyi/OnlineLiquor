@@ -6118,3 +6118,26 @@ px      68    160    252    344    436    */
   .login-wrap #radioBtn .notActive {
     color: #3276b1;
     background-color: #fff; }
+
+.profile {
+  background: url("../images/carousel-4.jpg") no-repeat;
+  background-size: cover; }
+  .profile .page-header {
+    text-align: left;
+    padding-left: 30px;
+    border: none; }
+    .profile .page-header h2 {
+      padding-bottom: 30px;
+      color: #fff; }
+  .profile .profile-details {
+    height: 100%; }
+    .profile .profile-details .profile-wrap {
+      margin-left: 30px;
+      background-color: rgba(0, 0, 0, 0.5);
+      height: 100%; }
+      .profile .profile-details .profile-wrap .profile-header {
+        padding-bottom: 9px;
+        margin: 40px 0 20px;
+        border-bottom: 1px solid #eee; }
+        .profile .profile-details .profile-wrap .profile-header h3 {
+          color: #fff; }
