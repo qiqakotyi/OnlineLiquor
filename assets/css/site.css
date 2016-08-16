@@ -5895,7 +5895,6 @@ body {
   padding: 0 !important;
   font: 15px/20px Arial, sans-serif;
   color: #333;
-  height: 100%;
   overflow-x: hidden; }
 
 .container-fluid {
@@ -6147,7 +6146,23 @@ px      68    160    252    344    436    */
     .profile .profile-details .profile-wrap .form-group .form-control {
       background-color: transparent;
       color: #fff; }
-    .profile .profile-details .profile-wrap .password-row {
-      padding-top: 40px;
-      margin-top: 40px;
-      border-top: 1px solid #eee; }
+    .profile .profile-details .profile-wrap .buttons {
+      margin: 40px 0; }
+      .profile .profile-details .profile-wrap .buttons .back-btn {
+        padding-right: 0; }
+        .profile .profile-details .profile-wrap .buttons .back-btn .form-group {
+          float: right; }
+      .profile .profile-details .profile-wrap .buttons .update-btn {
+        padding-left: 0; }
+        .profile .profile-details .profile-wrap .buttons .update-btn .form-group {
+          float: left; }
+      .profile .profile-details .profile-wrap .buttons .btn {
+        padding: 20px;
+        min-width: 132px;
+        background: transparent;
+        text-transform: uppercase;
+        color: #fff;
+        border: 1px solid #fff; }
+        .profile .profile-details .profile-wrap .buttons .btn:hover {
+          background: #fff;
+          color: #000; }

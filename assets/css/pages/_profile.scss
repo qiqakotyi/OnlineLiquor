@@ -46,9 +46,38 @@
       }
 
       .password-row {
-        padding-top: 40px;
-        margin-top: 40px;
-        border-top: 1px solid #eee;
+
+      }
+      .buttons {
+        margin: 40px 0;
+        .back-btn {
+          padding-right: 0;
+
+          .form-group {
+            float: right;
+          }
+        }
+        .update-btn {
+          padding-left: 0;
+          .form-group {
+            float: left;
+          }
+        }
+
+        .btn {
+          padding: 20px;
+          min-width: 132px;
+          background: transparent;
+          text-transform: uppercase;
+          color: $white;
+          border: 1px solid $white;
+
+          &:hover {
+            background: $white;
+            color: $black
+          }
+        }
+
       }
     }
   }
