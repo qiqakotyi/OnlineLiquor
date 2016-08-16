@@ -1,0 +1,134 @@
+/* border
+-------------------------------------------------- */
+
+@mixin border($border) {
+  border: $border;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;
+}
+
+/* Single side border-radius
+-------------------------------------------------- */
+
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin full-page-bg-color($b-padding, $b-margin) {
+  padding-bottom: $b-padding;
+  margin-bottom: $b-margin;
+}
+
+/* Image mixin
+-------------------------------------------------- */
+
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+  (-o-min-device-pixel-ratio: 2.6/2),
+  (-webkit-min-device-pixel-ratio: 1.3),
+  (min-device-pixel-ratio: 1.3),
+  (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+/* Font-size mixin
+-------------------------------------------------- */
+
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+/* media queries mixin
+-------------------------------------------------- */
+$desktop-width: 1600px;
+$laptop-width: 1440px;
+$tablet-width-portrait: 768px;
+$tablet-width-landscape: 1024px;
+$mobile-width-landscape: 640px;
+$mobile-width-portrait: 320px;
+
+@mixin bp-small-portrait {
+  @media screen and (min-width: #{$mobile-width-portrait}) and (max-width: #{$mobile-width-landscape}) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin bp-small-landscape {
+  @media screen and (min-width: #{$mobile-width-portrait}) and (max-width: #{$mobile-width-landscape}) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media screen and (min-width: #{$mobile-width-landscape}) and (max-width: #{$tablet-width-portrait}) {
+    @content;
+  }
+}
+
+@mixin bp-medium-landscape {
+  @media screen and (min-width: $tablet-width-portrait) and (max-width: $tablet-width-landscape) {
+    @content
+  }
+}
+
+@mixin bp-laptop {
+  @media screen and (min-width: $tablet-width-landscape) and (max-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin bp-large {
+  @media screen and (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin bp-iphone4 {
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation: portrait) {
+    @content
+  }
+}
+
+/* cross browser opacity mixin
+-------------------------------------------------- */
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}

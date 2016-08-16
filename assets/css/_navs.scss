@@ -1,0 +1,35 @@
+.main-nav {
+  height: 70px;
+  box-shadow: 0px 0px;
+  background-color: $green;
+  width: 100%;
+  color: #fff;
+  border-color: transparent;
+  li {
+    a {
+      color: #fff !important;
+    }
+  }
+  .navbar-nav {
+    margin: 7.5px -15px !important;
+  }
+  .navbar-brand {
+    color: #fff !important;
+    font-size: 30px;
+    margin: 7.5px -15px !important;
+  }
+
+  .login-btn {
+    height: 30px;
+    padding-top: 4px;
+    margin-top: 12px;
+    background: transparent;
+  }
+  .sign-up-btn {
+    height: 30px;
+    padding-top: 4px;
+    margin-top: 12px;
+    background: transparent;
+    margin-left: 10px;
+  }
+}

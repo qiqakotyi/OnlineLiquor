@@ -1,0 +1,20 @@
+{
+  "name": "loginApp",
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6",
+    "angular": "~1.4.8",
+    "owl": "owlcarousel#~1.3.2",
+    "slicknav": "~1.0.5",
+    "ngAnimate": "*",
+    "angular-route": "~1.4.8",
+    "gsap": "^1.19.0"
+  }
+}

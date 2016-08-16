@@ -1,0 +1,108 @@
+//@font-face {
+//  font-family: 'SourceSansProRegular';
+//  src:
+//  url('../fonts/SourceSansPro-Regular.eot') format('eot');
+//  src: url('../fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/SourceSansPro-Regular.otf') format('otf'),
+//  url('../fonts/SourceSansPro-Regular.woff') format('woff'),
+//  url('../fonts/SourceSansPro-Regular.ttf') format('truetype'),
+//  url('../fonts/SourceSansPro-Regular-webfont.svg#SourceSansPro-Regular') format('svg');
+//
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'SourceSansProExtraLight';
+//  src:
+//  url('../fonts/SourceSansPro-ExtraLight.eot') format('eot');
+//  src: url('../fonts/SourceSansPro-ExtraLight.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/SourceSansPro-ExtraLight.otf') format('otf'),
+//  url('../fonts/SourceSansPro-ExtraLight.woff') format('woff'),
+//  url('../fonts/SourceSansPro-ExtraLight.ttf') format('truetype'),
+//  url('../fonts/SourceSansPro-ExtraLightIt-webfont.svg#SourceSansPro-ExtraLight') format('svg');
+//
+//}
+//@font-face {
+//  font-family: 'SourceSansProBold';
+//  src:
+//  url('../fonts/SourceSansPro-Bold.eot') format('eot');
+//  src: url('../fonts/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/SourceSansPro-Bold.otf') format('otf'),
+//  url('../fonts/SourceSansPro-Bold.woff') format('woff'),
+//  url('../fonts/SourceSansPro-Bold.ttf') format('truetype'),
+//  url('../fonts/SourceSansPro-Bold-webfont.svg#SourceSansPro-Regular') format('svg');
+//}
+//
+
+//@mixin sans-light {
+//    font-family: 'SourceSansProExtraLight', sans-serif;
+//    font-weight: normal;
+//    font-style: normal;
+//}
+//
+//@mixin sans-regular {
+//  font-family: 'SourceSansProRegular',sans-serif;
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//
+//@mixin sans-bold {
+//  font-family: 'SourceSansProBold',sans-serif;
+//  font-weight: bold;
+//  font-style: normal;
+//}
+
+@function headings($from:1, $to:6) {
+  @if $from == $to {
+    @return 'h#{$from}';
+  } @else {
+    @return 'h#{$from},' + headings($from+1, $to);
+  }
+}
+
+.h1 {
+  color: $secondary-color;
+  font-size: 60px;
+  font-weight: 100
+}
+
+h2 {
+  font-weight: bold;
+  @include bp-small-portrait {
+    @include font-size(30px);
+  }
+}
+
+h3 {
+  @include bp-small-portrait {
+    @include font-size(20px);
+  }
+}
+
+.link {
+  color: $link-color;
+  font-weight: bold;
+  font-size: $link-font-size;
+  text-transform: uppercase;
+  border-bottom: 1px solid $link-color;
+  padding-bottom: 5px;
+  &:visited {
+    color: $link-color;
+  }
+
+  &:hover, &:visited:hover {
+    color: $link-hover-color;
+    border-bottom: 1px solid $link-hover-color;
+    text-decoration: none;
+  }
+}
+
+a {
+  color: $black;
+
+  &:hover, &:visited:hover {
+    color: $link-hover-color;
+    border-bottom: 1px solid $link-hover-color;
+    text-decoration: none;
+  }
+}
